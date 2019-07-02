@@ -6,3 +6,5 @@ console.log(msg);
 
 const greenMsg = chalk.bold.inverse.green("Success!");
 console.log(greenMsg);
+
+console.log(process.argv[2]);
