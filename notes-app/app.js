@@ -30,8 +30,15 @@ yargs.command({
 // Create remove command
 yargs.command({
   command: "remove",
+  builder: {
+    title: {
+      describe: "Note title",
+      demandOption: true,
+      type: "string"
+    }
+  },
   description: "Remove a note",
-  handler: () => console.log("Removing the note!")
+  handler: argv => notes.removeNote(argv.title)
 });
 
 // Create list command
