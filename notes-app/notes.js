@@ -23,7 +23,9 @@ const addNote = (title, body) => {
 };
 
 const removeNote = title => {
-  console.log(title);
+  const notes = loadNotes();
+  const notesToKeep = notes.filter(note => note.title !== title);
+  saveNotes(notesToKeep);
 };
 
 const saveNotes = notes => {
